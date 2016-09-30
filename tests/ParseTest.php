@@ -10,7 +10,11 @@ class ParseTest extends TestCase
 
     public function testSeed()
     {
-        Artisan::call('migrate:refresh');
-        $this->seed('DatabaseSeeder');
+        App\Helpers\ParseHelper::seed();
+    }
+
+    public function testAdding()
+    {
+       App\Helpers\ParseHelper::addNew();
     }
 }
